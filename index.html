@@ -5,36 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>block-drop-sampler</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <h1>block-drop-sampler</h1>
-    </div>
-    <div class="controls">
-        <label class="upload-label" for="upload">选择图片</label>
-        <input type="file" id="upload" accept="image/*">
-    </div>
-    <div class="cards-container">
-        <div id="original-card" class="card" style="display: none;">
-            <div class="card-header">
-                <h2>原始图片</h2>
-                <span class="resolution"></span>
-            </div>
-            <div class="card-content">
-                <div class="img-wrapper"></div>
+    <div class="container">
+        <div class="content">
+            <div class="cards-container">
+                <div id="control-card" class="card">
+                    <div class="card-header">
+                        <h1>block-drop-sampler</h1>
+                    </div>
+                    <div class="card-content">
+                        <div class="control-row">
+                            <label class="upload-label" for="upload">选择图片</label>
+                            <input type="file" id="upload" accept="image/*">
+                            <button id="retry" class="retry-btn" disabled>重试</button>
+                        </div>
+                        <div class="control-row">
+                            <label for="block-range">N = <span id="block-value">20</span></label>
+                            <input type="range" id="block-range" min="2" max="10" value="2" step="1" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div id="original-card" class="card" style="display: none;">
+                    <div class="card-header">
+                        <h2>原始图片</h2>
+                        <span class="resolution"></span>
+                    </div>
+                    <div class="card-content">
+                        <div class="img-wrapper"></div>
+                    </div>
+                </div>
+                <div id="result-card" class="card" style="display: none;">
+                    <div class="card-header">
+                        <h2>处理后</h2>
+                        <span class="grid-info"></span>
+                    </div>
+                    <div class="card-content">
+                        <div class="img-wrapper"></div>
+                        <button class="download-btn">下载图片</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="result-card" class="card" style="display: none;">
-            <div class="card-header">
-                <h2>处理后</h2>
-                <span class="grid-info"></span>
+        <footer class="footer">
+            <div class="footer-content">
+                <a href="https://github.com/senzi/block-drop-sampler" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <span class="separator">|</span>
+                <span>by senzi & windsurf</span>
+                <span class="separator">|</span>
+                <span>MIT License</span>
             </div>
-            <div class="card-content">
-                <div class="img-wrapper"></div>
-                <button class="download-btn">下载图片</button>
-            </div>
-        </div>
+        </footer>
     </div>
     <script src="sampler.js"></script>
 </body>
