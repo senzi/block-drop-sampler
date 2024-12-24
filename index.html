@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>block-drop-sampler</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>block-drop-sampler</h1>
+    </div>
+    <div class="controls">
+        <label class="upload-label" for="upload">选择图片</label>
+        <input type="file" id="upload" accept="image/*">
+    </div>
+    <div class="cards-container">
+        <div id="original-card" class="card" style="display: none;">
+            <div class="card-header">
+                <h2>原始图片</h2>
+                <span class="resolution"></span>
+            </div>
+            <div class="card-content">
+                <div class="img-wrapper"></div>
+            </div>
+        </div>
+        <div id="result-card-20" class="card" style="display: none;">
+            <div class="card-header">
+                <h2>处理后 (20×20)</h2>
+            </div>
+            <div class="card-content">
+                <div class="img-wrapper"></div>
+                <button class="download-btn">下载图片</button>
+            </div>
+        </div>
+        <div id="result-card-30" class="card" style="display: none;">
+            <div class="card-header">
+                <h2>处理后 (30×30)</h2>
+            </div>
+            <div class="card-content">
+                <div class="img-wrapper"></div>
+                <button class="download-btn">下载图片</button>
+            </div>
+        </div>
+    </div>
+    <script src="sampler.js"></script>
+</body>
+</html>
