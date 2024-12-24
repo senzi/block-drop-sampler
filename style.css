@@ -124,6 +124,8 @@ body {
     max-width: 300px;
     height: 6px;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     background: #404040;
     border-radius: 3px;
     outline: none;
@@ -160,6 +162,8 @@ body {
 
 #block-range::-webkit-slider-thumb {
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     width: 18px;
     height: 18px;
     background: #808080;

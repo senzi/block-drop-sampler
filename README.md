@@ -1,2 +1,57 @@
-# block-drop-sampler
-A straightforward image sampling technique that drops alternate blocks in both rows and columns while preserving original pixel data in retained blocks.
+# Block Drop Sampler
+
+一个简单的图像块采样工具，可以对图像进行隔行隔列采样处理。
+
+🌐 [在线演示](https://drop.closeai.moe)
+
+## 功能特点
+
+- 支持任意图片格式输入
+- 动态调整采样块大小（N = 20 到 100）
+- 自动适配原图分辨率
+- 智能处理小尺寸图片（自动放大）
+- 支持下载处理后的图片
+- 响应式设计，支持移动端
+
+## 使用方法
+
+1. 点击"选择图片"上传你想要处理的图片
+2. 使用滑动条调整分块数（N）
+   - N = 20：将图片分成 20 × M 的网格
+   - N = 100：将图片分成 100 × M 的网格
+   - M 会根据原图比例自动计算
+3. 点击"重试"可以重新处理当前图片
+4. 点击"下载图片"保存处理结果
+
+## 技术说明
+
+- 纯前端实现，无需后端支持
+- 使用 Canvas API 进行图像处理
+- 自适应图像尺寸处理：
+  - 当分块后的单个块大小小于 10px 时自动放大
+  - 放大倍率会在界面上显示（如：[×2]、[×4]）
+
+## 开发说明
+
+本项目使用原生 HTML、CSS 和 JavaScript 开发，无需额外依赖。
+
+### 本地运行
+
+```bash
+# 使用任意 HTTP 服务器，例如 Python 的 http.server
+python -m http.server
+
+# 或使用 Node.js 的 http-server
+npx http-server
+```
+
+然后在浏览器中访问 `http://localhost:8000`
+
+## 许可证
+
+MIT License
+
+## 作者
+
+- senzi
+- windsurf
